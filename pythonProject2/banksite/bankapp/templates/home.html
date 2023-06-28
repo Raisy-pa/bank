@@ -1,0 +1,39 @@
+
+<!-- banking/templates/home.html -->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <div class="container-fluid">
+    <h1>Welcome to the Banking Website</h1>
+
+    <!-- Insert banking images -->
+    <img class="banking-image" src="{% static 'images/img_1.png' %}" alt="Banking Image 1">
+
+    <!-- Add more image tags as needed -->
+
+    <!-- Rest of the content -->
+  </div>
+{% endblock %}
+
+<style>
+    .container-fluid {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightyellow;
+    }
+
+    .container-fluid h1 {
+        margin-bottom: 30px;
+    }
+
+    .banking-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+</style>

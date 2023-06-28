@@ -1,0 +1,72 @@
+<!-- banking/templates/base.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banking Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: white;
+            color: black;
+        }
+
+        .navbar {
+            background-color: black;
+        }
+
+        .navbar-light .navbar-brand {
+            color: black;
+        }
+
+        .navbar-light .navbar-nav .nav-link {
+            color: black;
+        }
+
+        .dropdown-menu {
+            background-color: white;
+        }
+
+        .dropdown-item {
+            color: black;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand navbar-light bg-light">
+        <a class="navbar-brand" href="/">Banking</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/register">Register</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="branchesDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Branches
+                </a>
+                <div class="dropdown-menu" aria-labelledby="branchesDropdown">
+                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/District_1">District 1</a>
+                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/District_2">District 2</a>
+                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/District_3">District 3</a>
+                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/District_4">District 4</a>
+                    <a class="dropdown-item" href="https://en.wikipedia.org/wiki/District_5">District 5</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
